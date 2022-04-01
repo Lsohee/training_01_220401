@@ -1,0 +1,134 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
+#container{
+  width:1920px;
+  background-color: rgb(148, 148, 148);
+  height:1080px;
+  /* display: flex; */
+}
+/* left */
+#container>div:nth-child(1){
+  width:1010px;
+  height:1080px;
+  display: inline-block;
+  /* border: 1px solid black; */
+  /* z-index: 1; */
+  /* background-color: white; */
+}
+/* 
+#container>div:nth-child(1)>div{
+  width:40vw;
+  position:relative;
+  top:100px;
+  left: 200px;
+  height:60vh;
+  border: 1px solid black;
+} */
+
+/* right */
+#container>div:nth-child(2){
+  width:900px;
+  height:1080px;
+  display: inline-block;
+  /* z-index: 3; */
+  background-color: aliceblue;
+}
+/* 
+#container>div:nth-child(2)>div{
+  width:30vw;
+  height:60vh;
+  border: 1px solid black;
+} */
+
+#container>div:nth-child(3){
+  display: flex;
+  position: relative;
+  top:-950px;
+  left:200px;
+width:1410px;
+height:800px;
+background-color: blue;
+
+/* z-index: 2; */
+}
+#container>div:nth-child(3)>div:nth-child(1){
+  width:75%;
+  height:100%;
+  background-color: rgb(227, 227, 227);
+  display: flex;
+  align-items: center;
+}
+#container>div:nth-child(3)>div:nth-child(2){
+  width:25%;
+  height:100%;
+  background-color: rgb(136, 136, 136);
+}
+/* 질문
+
+무엇을 -- #container>div:nth-child(1)>div과 #container>div:nth-child(2)>div를 
+어떻게하고싶은데  -- 중앙에서 붙이고 싶음
+
+1.이렇게 해봄 -- div들에게 position:relative;을 줘서 부모를 넘어가게 만든 다음 하위속성들로 위치를 이동서켜서 붙임
+  이렇게 됨 -- 확대 축소할때 div들이 움직임
+
+2.이렇게 해봄 -- position:absolute;로 바꿈
+  이렇게됨 -- 계속 움직임
+
+3.이렇게 해봄 -- #container>div을 3개로 만든 다음 div에 display:inline;을 줘서 #container>div:nth-child(2)에 z-index를 넣어서 겹치게 만듦
+  이렇게 됨 -- display:flex를 안쓰면 z-index를 못쓰는데 display:flex을 쓰면 자식 div이 부모를 넘어가지 못한다.
+
+4.이렇게 해봄 -- 어차피 겹쳐서 위에것을 보이게 할거면 걍 display:inline;으로 놓고 div:nth-child(3)를 position으로 움직이면 안겹쳐지려나?
+  이렇게 됨 -- 겹쳐지긴 하는데 이렇게 position을 마구잡이로 쓰지 않고 해결할 수 있는 방법이 없을까?
+
+*/
+
+
+
+/* 질문
+display:inline; 이나 display:block;은 원하는 태그에 직접심는건가?
+그러면 display:inline;와 display:flex;가 한 태그에 같이 있을 수도 있나?
+*/
+
+
+
+#container>div:nth-child(3)>div:nth-child(1)>div:nth-child(1){
+  width:5%;
+  height:100%;
+  background-color: gray;
+  
+}
+
+#container>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(3){
+  width: 500px;
+  height:100px;
+}
+#container>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1){
+  font-size: 100px;
+}
+
+#container>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2){
+  font-size: 40px;
+}
+
+/* h1태그는 크기지정이 따로 안먹나? */
+
+#container>div:nth-child(3)>div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+#container>div:nth-child(3)>div:nth-child(2)>div:nth-child(1){
+  width:100%;
+  height:5%;
+  background-color: rgb(70, 70, 70);
+}
+
+#container>div:nth-child(3)>div:nth-child(2)>div:nth-child(2){
+  width:100%;
+  height:10%;
+  background-color: rgb(70, 70, 70);
+}
+
+
